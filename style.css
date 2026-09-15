@@ -449,19 +449,60 @@ position:relative;
 overflow:hidden;
 border:1px solid rgba(255,255,255,.08);
 }
+
 .demo:before{
 content:"";
 position:absolute;
 inset:0;
 background:linear-gradient(transparent,rgba(0,0,0,.72));
+z-index:1;
 }
-.demo>*{position:relative}
-.demo b{font-size:1.3rem;letter-spacing:.08em}
-.demo span{font-size:.7rem;opacity:.9}
-.demo-barber{background:linear-gradient(145deg,#101827,#36516c)}
-.demo-food{background:linear-gradient(145deg,#07536e,#071b2a)}
-.demo-auto{background:linear-gradient(145deg,#101822,#285778)}
-.demo-salon{background:linear-gradient(145deg,#10243b,#3978a5)}
+
+.demo img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:0;
+}
+
+.demo>*{
+position:relative;
+}
+
+.demo .demo-overlay{
+position:relative;
+z-index:2;
+display:flex;
+flex-direction:column;
+}
+
+.demo b{
+font-size:1.3rem;
+letter-spacing:.08em;
+}
+
+.demo span{
+font-size:.7rem;
+opacity:.9;
+}
+
+.demo-barber{
+background:linear-gradient(145deg,#101827,#36516c);
+}
+
+.demo-food{
+background:linear-gradient(145deg,#07536e,#071b2a);
+}
+
+.demo-auto{
+background:linear-gradient(145deg,#101822,#285778);
+}
+
+.demo-salon{
+background:linear-gradient(145deg,#10243b,#3978a5);
+}
 .show-card>strong{display:block;margin:13px 0 2px}
 .show-card>small{font-size:.7rem;color:#738198}
 
