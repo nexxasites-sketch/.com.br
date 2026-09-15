@@ -65,8 +65,29 @@ qs("#restart").addEventListener("click",()=>{document.querySelectorAll('input[ty
 qs("#year").textContent=new Date().getFullYear();
 qs("#menuBtn").addEventListener("click",()=>qs("#nav").classList.toggle("open"));
 qsa(".nav a").forEach(a=>a.addEventListener("click",()=>qs("#nav").classList.remove("open")));
-const modal=qs("#demoModal"), modalTitle=qs("#modalTitle"), preview=qs("#modalPreview");
-qsa("[data-demo]").forEach(card=>card.addEventListener("click",()=>{modalTitle.textContent=`Exemplo de ${card.dataset.demo}`;preview.textContent=card.dataset.demo.toUpperCase();preview.className="modal-preview";modal.classList.add("open");modal.setAttribute("aria-hidden","false")}));
+const modal=qs("#demoModal"), modalTitle=qs("#modalTitle"), preview=qs("#modalPreview"), modalDemo=qs("#modalDemo");
+
+const demoPages={
+  "Barbearia":"barbearia.html",
+  "Restaurante":"restaurante.html",
+  "Oficina":"oficina.html",
+  "Salão":"salao.html"
+};
+
+qsa("[data-demo]").forEach(card=>card.addEventListener("click",e=>{
+  e.preventDefault();
+
+  const demo=card.dataset.demo;
+
+  modalTitle.textContent=`Exemplo de ${demo}`;
+  preview.textContent=demo.toUpperCase();
+  preview.className="modal-preview";
+
+  modalDemo.href=`exemplos/${demoPages[demo]}`;
+
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden","false");
+}));
 function closeModal(){modal.classList.remove("open");modal.setAttribute("aria-hidden","true")}
 qs("#modalClose").addEventListener("click",closeModal);modal.addEventListener("click",e=>{if(e.target===modal)closeModal()});
 qs("#modalQuote").addEventListener("click",closeModal);
