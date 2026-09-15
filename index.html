@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NEXXA cria sites profissionais para pequenos negócios. Monte seu orçamento online.">
+<title>NEXXA — Sua presença digital começa aqui.</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#inicio" aria-label="NEXXA início"><img src="assets/nexa-mark.svg" alt="" class="brand-mark"><span>NEXXA</span></a>
+  <nav class="nav" id="nav">
+    <a href="#inicio">Início</a><a href="#planos">Planos</a><a href="#exemplos">Exemplos</a><a href="#sobre">Sobre</a><a href="#faq">FAQ</a>
+    <a class="nav-cta" href="#orcamento">Montar orçamento</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+</header>
+
+<main id="inicio">
+<section class="hero section">
+  <div class="hero-copy">
+    <div class="eyebrow"><span class="pulse"></span> Sites profissionais para pequenos negócios</div>
+    <h1>Seu negócio.<br><span>Sua presença.</span><br>Seu site.</h1>
+    <p>A NEXXA cria sites modernos, rápidos e pensados para fazer sua empresa ser vista e transmitir confiança.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#orcamento">Monte seu site <span>→</span></a>
+      <a class="btn ghost" href="#planos">Conheça os planos</a>
+    </div>
+    <div class="trust-row"><div><strong>100%</strong><small>Responsivo</small></div><div><strong>+NEXXA</strong><small>Feito para você</small></div><div><strong>20%</strong><small>OFF inicial*</small></div></div>
+  </div>
+  <div class="hero-visual">
+    <div class="glow"></div>
+    <div class="browser-card">
+      <div class="browser-top"><span></span><span></span><span></span><label>nexxa.sites</label></div>
+      <div class="mock-content"><div class="mock-logo">N</div><div class="mock-line long"></div><div class="mock-line short"></div><div class="mock-grid"><i></i><i></i><i></i></div></div>
+    </div>
+    <div class="floating-card"><b>Seu orçamento</b><strong id="heroPrice">R$ 399,99</strong><small>começa por aqui</small></div>
+  </div>
+</section>
+
+<section class="section stats"><div><strong>Sites modernos</strong><span>com visual profissional</span></div><div><strong>Orçamento online</strong><span>sem enrolação</span></div><div><strong>Suporte</strong><span>manutenção mensal</span></div></section>
+
+<section class="section" id="planos">
+  <div class="section-head"><div><span class="eyebrow">PLANOS</span><h2>Escolha o ponto de partida.</h2></div><p>Comece simples ou vá além. O orçamento pode ser personalizado com recursos extras.</p></div>
+  <div class="plans">
+    <article class="plan" data-plan-card="essencial"><span class="plan-tag">Para começar</span><h3>Essencial</h3><p>Presença digital profissional para quem quer colocar o negócio na internet.</p><div class="price">R$399,99 <small>criação</small></div><div class="maintenance">+ R$75/mês de manutenção</div><ul><li>✓ Site responsivo</li><li>✓ Página inicial</li><li>✓ Sobre a empresa</li><li>✓ Serviços/produtos</li><li>✓ Contato e links sociais</li><li>✓ Botão WhatsApp</li></ul><a href="#orcamento" class="btn outline full" data-choose="essencial">Escolher Essencial</a></article>
+    <article class="plan featured" data-plan-card="profissional"><div class="popular">MAIS COMPLETO</div><span class="plan-tag">Para crescer</span><h3>Profissional</h3><p>Mais páginas e recursos para empresas que querem uma apresentação completa.</p><div class="price">R$599,99 <small>criação</small></div><div class="maintenance">+ R$117/mês de manutenção</div><ul><li>✓ Tudo do Essencial</li><li>✓ Estrutura mais completa</li><li>✓ Mais páginas</li><li>✓ Recursos avançados</li><li>✓ Personalização visual</li><li>✓ Pronto para receber extras</li></ul><a href="#orcamento" class="btn primary full" data-choose="profissional">Escolher Profissional</a></article>
+    <article class="plan" data-plan-card="avancado"><span class="plan-tag">Sistemas</span><h3>Avançado</h3><p>Para projetos que precisam de banco de dados, login ou funcionalidades de sistema.</p><div class="price">R$799,99 <small>criação</small></div><div class="maintenance">+ R$150/mês de manutenção</div><ul><li>✓ Projeto personalizado</li><li>✓ Funcionalidades com sistema</li><li>✓ Banco de dados (quando necessário)</li><li>✓ Estrutura preparada para evolução</li><li>✓ Desenvolvimento sob medida</li></ul><a href="#orcamento" class="btn outline full" data-choose="avancado">Escolher Avançado</a></article>
+  </div>
+  <div class="comparison"><h3>Compare os planos</h3><div class="table-wrap"><table><thead><tr><th>Recurso</th><th>Essencial</th><th>Profissional</th><th>Avançado</th></tr></thead><tbody>
+  <tr><td>Site responsivo</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Páginas institucionais</td><td>✓</td><td>✓</td><td>✓</td></tr><tr><td>Mais páginas e estrutura</td><td>—</td><td>✓</td><td>✓</td></tr><tr><td>Funcionalidades avançadas</td><td>Extras</td><td>✓</td><td>✓</td></tr><tr><td>Banco de dados / sistema</td><td>—</td><td>—</td><td>✓</td></tr><tr><td>Manutenção mensal</td><td>R$75</td><td>R$117</td><td>R$150</td></tr></tbody></table></div></div>
+</section>
+
+<section class="section showcase" id="exemplos">
+  <div class="section-head"><div><span class="eyebrow">EXEMPLOS</span><h2>Um site para cada tipo de negócio.</h2></div><p>Veja direções visuais que a NEXXA pode adaptar para diferentes empresas.</p></div>
+  <div class="showcase-grid">
+    <button class="show-card" data-demo="Barbearia"><div class="demo demo-barber"><b>BARBEARIA</b><span>Estilo que começa no detalhe.</span></div><strong>Barbearia</strong><small>Visual urbano e moderno →</small></button>
+    <button class="show-card" data-demo="Restaurante"><div class="demo demo-food"><b>RESTAURANTE</b><span>Sabor que merece ser visto.</span></div><strong>Restaurante</strong><small>Cardápio e presença digital →</small></button>
+    <button class="show-card" data-demo="Oficina"><div class="demo demo-auto"><b>OFICINA</b><span>Seu carro em boas mãos.</span></div><strong>Oficina</strong><small>Serviços e contato rápido →</small></button>
+    <button class="show-card" data-demo="Salão"><div class="demo demo-salon"><b>SALÃO</b><span>Beleza em cada detalhe.</span></div><strong>Salão de beleza</strong><small>Elegância e conversão →</small></button>
+  </div>
+</section>
+
+<section class="section about" id="sobre">
+  <div class="about-card"><div class="big-n">N</div><div><span class="eyebrow">SOBRE A NEXXA</span><h2>Profissionalizar sua presença digital é mais simples do que parece.</h2><p>A NEXXA nasceu para ajudar pequenos negócios a terem um site bonito, funcional e acessível — sem processos complicados.</p><p>Você escolhe o que precisa, monta uma estimativa e envia o projeto para nossa equipe pelo Instagram. A partir daí, conversamos sobre os detalhes e fechamos o projeto.</p></div></div>
+  <div class="benefits"><div><b>01</b><h3>Design profissional</h3><p>Seu negócio com uma presença digital de verdade.</p></div><div><b>02</b><h3>Feito para celular</h3><p>Uma experiência pensada para telas grandes e pequenas.</p></div><div><b>03</b><h3>Manutenção</h3><p>Atualize produtos, preços, fotos e pequenos detalhes sem refazer o site.</p></div></div>
+</section>
+
+<section class="section promo"><div><span class="eyebrow">OFERTA DE LANÇAMENTO</span><h2>Comece seu projeto com <span>20% OFF.</span></h2><p>Oferta inicial da NEXXA. Promoções relâmpago poderão aparecer por tempo limitado.</p></div><a href="#orcamento" class="btn primary">Aproveitar oferta →</a></section>
+
+<section class="section faq" id="faq"><div class="section-head"><div><span class="eyebrow">DÚVIDAS</span><h2>Perguntas frequentes.</h2></div></div>
+<div class="faq-list">
+<details><summary>O que a manutenção mensal inclui?<span>+</span></summary><p>Alteração de preços, troca de fotos, adição ou alteração de produtos e correção de pequenos erros no site.</p></details>
+<details><summary>Eu preciso pagar online?<span>+</span></summary><p>Não. O site da NEXXA serve para montar e encaminhar seu orçamento. A negociação e o pagamento são tratados diretamente pelo Instagram.</p></details>
+<details><summary>Posso pedir uma função que não aparece no simulador?<span>+</span></summary><p>Sim. Use o campo de observações no orçamento e explique o que precisa. A equipe avalia e combina o valor pelo Instagram.</p></details>
+<details><summary>Posso ter um domínio próprio?<span>+</span></summary><p>Sim. O domínio pode ser contratado conforme a extensão e o preço vigente. A NEXXA adiciona R$100,00 pelo serviço relacionado ao domínio.</p></details>
+<details><summary>Quando preciso do plano Avançado?<span>+</span></summary><p>Quando o projeto precisar de recursos que dependam de sistema ou banco de dados, como login, armazenamento de dados ou funcionalidades personalizadas.</p></details>
+</div></section>
+
+<section class="section quote" id="orcamento">
+  <div class="quote-head"><span class="eyebrow">SIMULADOR NEXXA</span><h2>Monte seu site.</h2><p>Escolha o que precisa. O valor é calculado automaticamente e você envia o resumo para o Instagram.</p></div>
+  <div class="builder">
+    <div class="steps"><span class="active" data-step-dot="1">1</span><i></i><span data-step-dot="2">2</span><i></i><span data-step-dot="3">3</span><i></i><span data-step-dot="4">4</span></div>
+    <div class="builder-main">
+      <div class="step-panel active" data-step="1"><h3>Escolha seu plano</h3><p class="muted">Comece pela base do seu projeto.</p><div class="option-grid">
+        <label class="choice"><input type="radio" name="plan" value="essencial" checked><span><b>Essencial</b><small>R$399,99 + R$75/mês</small></span></label>
+        <label class="choice"><input type="radio" name="plan" value="profissional"><span><b>Profissional</b><small>R$599,99 + R$117/mês</small></span></label>
+        <label class="choice"><input type="radio" name="plan" value="avancado"><span><b>Avançado</b><small>R$799,99 + R$150/mês</small></span></label>
+      </div><button class="btn primary next" data-next="2">Continuar →</button></div>
+
+      <div class="step-panel" data-step="2"><h3>Adicione funcionalidades</h3><p class="muted">Selecione somente o que quiser no projeto.</p><div class="extras">
+        <label><input type="checkbox" data-extra="mapa" data-price="49.99"><span><b>Mapa / localização</b><small>+ R$49,99</small></span></label>
+        <label><input type="checkbox" data-extra="pagina" data-price="39.99"><span><b>Página adicional</b><small>+ R$39,99 cada</small></span><input class="qty" type="number" min="1" max="20" value="1" data-qty="pagina" aria-label="Quantidade de páginas adicionais"></label>
+        <label><input type="checkbox" data-extra="feedback" data-price="69.99"><span><b>Feedbacks / depoimentos</b><small>+ R$69,99</small></span></label>
+        <label><input type="checkbox" data-extra="catalogo" data-price="59.99"><span><b>Catálogo de produtos</b><small>+ R$59,99</small></span></label>
+        <label><input type="checkbox" data-extra="agendamento" data-price="299.99"><span><b>Agendamento</b><small>+ R$299,99</small></span></label>
+        <label><input type="checkbox" data-extra="whatsapp" data-price="29.99"><span><b>WhatsApp</b><small>+ R$29,99</small></span></label>
+        <label><input type="checkbox" data-extra="instagram" data-price="29.99"><span><b>Instagram</b><small>+ R$29,99</small></span></label>
+        <label><input type="checkbox" data-extra="faq" data-price="159.99"><span><b>FAQ</b><small>+ R$159,99</small></span></label>
+        <label><input type="checkbox" data-extra="galeria" data-price="189.99"><span><b>Galeria</b><small>+ R$189,99</small></span></label>
+        <label class="domain-option"><input type="checkbox" id="domainCheck"><span><b>Domínio próprio</b><small>Custo do domínio + R$100,00</small></span></label>
+      </div><div class="nav-actions"><button class="btn ghost prev" data-prev="1">← Voltar</button><button class="btn primary next" data-next="3">Continuar →</button></div></div>
+
+      <div class="step-panel" data-step="3"><h3>Conte sobre sua empresa</h3><p class="muted">Essas informações serão enviadas junto do orçamento.</p><div class="form-grid">
+        <label>Nome da empresa<input id="company" type="text" placeholder="Ex.: Max Transportes" required></label>
+        <label>Seu nome<input id="person" type="text" placeholder="Como podemos chamar você?" required></label>
+        <label>Tipo de negócio<input id="businessType" type="text" placeholder="Ex.: Barbearia, loja, oficina..." required></label>
+        <label>Instagram / @<input id="clientInstagram" type="text" placeholder="@suaempresa"></label>
+        <label>WhatsApp<input id="clientWhatsapp" type="tel" placeholder="(00) 00000-0000"></label>
+        <label class="full-field">Observações / algo fora da lista<textarea id="notes" rows="5" placeholder="Explique qualquer função, estilo ou necessidade específica..."></textarea></label>
+      </div><div class="nav-actions"><button class="btn ghost prev" data-prev="2">← Voltar</button><button class="btn primary next" data-next="4">Ver meu orçamento →</button></div></div>
+
+      <div class="step-panel" data-step="4"><h3>Seu orçamento</h3><p class="muted">Uma estimativa clara para você levar à NEXXA.</p><div class="summary-box" id="summaryBox"></div><div class="send-box"><h4>Pronto para enviar?</h4><p>O Instagram será aberto com uma mensagem pronta contendo os dados do seu projeto.</p><button class="btn primary full" id="sendInstagram">Enviar orçamento para @nexxa.sites ↗</button><button class="btn ghost full" id="restart">Refazer orçamento</button></div><p class="disclaimer">* O valor é uma estimativa. Funcionalidades personalizadas e domínio têm valor final confirmado pela NEXXA no Instagram. A promoção de 20% OFF é aplicada sobre a criação e pode ser alterada ou encerrada pela NEXXA.</p></div>
+    </div>
+    <aside class="price-panel"><small>ESTIMATIVA</small><strong id="liveTotal">R$399,99</strong><span id="liveMaintenance">+ R$75/mês</span><div class="discount-badge">20% OFF na criação</div><div id="liveDetails">Essencial</div></aside>
+  </div>
+</section>
+</main>
+
+<footer><div class="footer-brand"><img src="assets/nexa-mark.svg" alt=""><b>NEXXA</b><span>Sua presença digital começa aqui.</span></div><div class="footer-links"><a href="#planos">Planos</a><a href="#exemplos">Exemplos</a><a href="#orcamento">Orçamento</a><a href="https://instagram.com/nexxa.sites" target="_blank" rel="noopener">Instagram</a></div><small>© <span id="year"></span> NEXXA. Todos os direitos reservados.</small></footer>
+
+<div class="modal" id="demoModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="modalClose" aria-label="Fechar">×</button><span class="eyebrow">DEMONSTRAÇÃO</span><h3 id="modalTitle">Site demonstrativo</h3><div class="modal-preview" id="modalPreview"></div><p>Este é um conceito visual. A NEXXA adapta o site ao negócio, conteúdo e identidade de cada cliente.</p><a href="#orcamento" class="btn primary" id="modalQuote">Quero um site assim →</a></div></div>
+<script src="script.js"></script>
+</body>
+</html>
