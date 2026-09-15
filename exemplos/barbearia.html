@@ -1,1 +1,441 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>BLACK — Barbearia</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(11, 11, 11, 0.94);
+      border-bottom: 1px solid #252525;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+
+    .logo span {
+      color: #c8a96b;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 14px;
+      color: #bdbdbd;
+    }
+
+    .nav-links a:hover {
+      color: #c8a96b;
+    }
+
+    .hero {
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.95), rgba(0,0,0,.55)),
+        radial-gradient(circle at 80% 40%, #473719, transparent 35%),
+        #111;
+    }
+
+    .hero-content {
+      width: 1150px;
+      max-width: 100%;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .tag {
+      color: #c8a96b;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(48px, 8vw, 92px);
+      line-height: .95;
+      text-transform: uppercase;
+      letter-spacing: -4px;
+    }
+
+    h1 span {
+      color: #c8a96b;
+    }
+
+    .hero p {
+      max-width: 560px;
+      color: #bdbdbd;
+      font-size: 18px;
+      margin: 28px 0;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 22px;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn-primary {
+      background: #c8a96b;
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #e0c58d;
+    }
+
+    .btn-secondary {
+      border: 1px solid #555;
+      color: #fff;
+    }
+
+    .btn-secondary:hover {
+      border-color: #c8a96b;
+      color: #c8a96b;
+    }
+
+    section {
+      padding: 90px 24px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-title {
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    .services {
+      background: #101010;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service {
+      border: 1px solid #282828;
+      background: #151515;
+      padding: 30px;
+      transition: .25s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      border-color: #c8a96b;
+    }
+
+    .service-number {
+      color: #c8a96b;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .service h3 {
+      margin: 35px 0 8px;
+      font-size: 24px;
+    }
+
+    .service p {
+      color: #999;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-box {
+      min-height: 380px;
+      border: 1px solid #292929;
+      background:
+        radial-gradient(circle at center, #463919, transparent 45%),
+        #151515;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about-box strong {
+      font-size: 120px;
+      color: #c8a96b;
+      letter-spacing: -12px;
+    }
+
+    .about-text p {
+      color: #aaa;
+      margin-top: 18px;
+    }
+
+    .booking {
+      background: #c8a96b;
+      color: #111;
+      text-align: center;
+    }
+
+    .booking h2 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .booking p {
+      margin: 18px auto 28px;
+      max-width: 600px;
+    }
+
+    .booking .btn {
+      background: #111;
+      color: #fff;
+    }
+
+    footer {
+      padding: 35px 24px;
+      background: #080808;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 80vh;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-box {
+        min-height: 280px;
+      }
+
+      .about-box strong {
+        font-size: 90px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="#" class="logo">BLACK<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#agendamento">Agendamento</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+
+        <div class="tag">Barbearia premium</div>
+
+        <h1>
+          Estilo que<br>
+          começa no <span>detalhe.</span>
+        </h1>
+
+        <p>
+          Cortes clássicos, barba e acabamento impecável.
+          Uma experiência criada para quem valoriza presença e estilo.
+        </p>
+
+        <div class="buttons">
+          <a href="#agendamento" class="btn btn-primary">
+            Agendar horário →
+          </a>
+
+          <a href="#servicos" class="btn btn-secondary">
+            Ver serviços
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="services" id="servicos">
+      <div class="container">
+
+        <div class="section-title">
+          <div class="tag">Serviços</div>
+          <h2>Feito no detalhe.</h2>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service">
+            <div class="service-number">01</div>
+            <h3>Corte masculino</h3>
+            <p>
+              Corte personalizado de acordo com seu estilo,
+              formato e preferência.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">02</div>
+            <h3>Barba</h3>
+            <p>
+              Modelagem e acabamento para deixar sua barba
+              alinhada e bem definida.
+            </p>
+          </article>
+
+          <article class="service">
+            <div class="service-number">03</div>
+            <h3>Corte + barba</h3>
+            <p>
+              O combo completo para sair da cadeira
+              com o visual renovado.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container about">
+
+        <div class="about-box">
+          <strong>BK</strong>
+        </div>
+
+        <div class="about-text">
+          <div class="tag">A experiência</div>
+
+          <h2>
+            Muito mais que um corte.
+          </h2>
+
+          <p>
+            Na BLACK, cada atendimento é pensado para entregar
+            precisão, conforto e personalidade.
+          </p>
+
+          <p>
+            Um espaço moderno para quem entende que pequenos
+            detalhes fazem toda diferença.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="booking" id="agendamento">
+      <div class="container">
+
+        <h2>Seu próximo visual começa aqui.</h2>
+
+        <p>
+          Entre em contato e encontre o melhor horário
+          para o seu atendimento.
+        </p>
+
+        <a
+          class="btn"
+          href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20agendar%20um%20horário."
+          target="_blank"
+          rel="noopener"
+        >
+          Agendar pelo WhatsApp
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    BLACK BARBEARIA © 2026 — Site demonstrativo criado pela NEXXA.
+  </footer>
+
+</body>
+</html>
