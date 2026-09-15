@@ -83,7 +83,7 @@ qsa("[data-demo]").forEach(card=>card.addEventListener("click",e=>{
   preview.textContent=demo.toUpperCase();
   preview.className="modal-preview";
 
-  modalDemo.href=`exemplos/${demoPages[demo]}`;
+  modalDemo.href=`./exemplos/${demoPages[demo]}`;
 
   modal.classList.add("open");
   modal.setAttribute("aria-hidden","false");
